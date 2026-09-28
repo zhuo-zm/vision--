@@ -1,0 +1,17 @@
+#include <cmath>
+#include <iomanip>
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x1,y1,x2,y2;
+    long double dE,dM,a;
+    cin>>x1>>y1;
+    cout<<endl;
+    cin>>x2>>y2;
+    dE=sqrt(pow((x1-x2),2)+pow((y1-y2),2));
+    dM=fabs(x1-x2)+fabs(y1-y2);
+    a=fabs(dM-dE);
+    cout<<fixed<<setprecision(10) <<a;
+
+}
