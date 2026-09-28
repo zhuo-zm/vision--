@@ -1,0 +1,12 @@
+#include <iomanip>
+#include <ios>
+#include <iostream>
+using namespace std;
+
+int main() {
+    long int d,c;
+    double m;
+    cin>>c>>d;
+    m=d*100.0/c;
+    cout<<fixed<<setprecision(3) <<m<<"%";
+}
