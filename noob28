@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a;
+    cin>>a;
+    int b;
+    b=a%100;
+    if(b>=3&&b<=5)
+    cout<<"spring";
+    else if(b>=6&&b<=8)
+    cout<<"summer";
+    else if(b>=9&&b<=11)
+    cout<<"autumn";
+    else
+     cout<<"winter";
+}
