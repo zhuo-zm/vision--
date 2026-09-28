@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int MB,KB,B;
+    cin>>MB;
+    KB=MB*1024;
+    B=1024*KB;
+    cout<<B/4;
+}
