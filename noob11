@@ -1,0 +1,11 @@
+#include <cmath>
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    int a;
+    cin>>n;
+    a=sqrt(n);
+    cout<<a;
+}
