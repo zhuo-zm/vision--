@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a,b,c;
+    int S,V;
+    cin>>a>>b>>c;
+    S=2*(a*b+b*c+c*a);
+    V=a*b*c;
+    cout<<S<<endl<<V;
+}
