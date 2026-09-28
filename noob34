@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a;
+    cin>>a;
+    int b,c=-100000,d=100000;
+    for(int i=0;i<a;i++)
+    {
+        cin>>b;
+        c=max(c,b);
+        d=min(d,b);
+    }
+    cout<<c-d;
+}
