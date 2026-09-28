@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float K,C,F;
+    cin>>K;
+    C=K-273.15;
+    F=C*1.8+32;
+    cout<<F;
+}
