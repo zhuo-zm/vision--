@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a,b;
+    int m,n;
+    cin>>a>>b;
+    m=a/b;
+    n=a%b;
+    cout<<m<<" "<<n;
+}
