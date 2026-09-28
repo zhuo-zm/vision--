@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int d;
+    int t;
+    cin>>d;
+    t=d+1;
+    if(t>7)
+    cout<<t%7;
+    else
+    cout<<t;
+}
