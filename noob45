@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n,x;
+    cin>>n>>x;
+    int a,b=0;
+    for(int i=1;i<=n;i++)
+    {
+        int j=i;
+        while(j)
+        {
+            a=j%10;
+            if(a==x)
+            b++;
+            j=j/10;
+        }
+    }
+    cout<<b;
+}
