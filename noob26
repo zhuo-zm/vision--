@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int A,B,C;
+    cin>>A>>B>>C;
+    int ave;
+    ave=(A+B+C)/3;
+    if(ave<60)
+    cout<<"YES";
+    else
+     cout<<"NO";
+}
