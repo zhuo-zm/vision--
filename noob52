@@ -1,0 +1,68 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n,m;
+    cin>>n>>m;
+    int a[1000][1000];
+    char d;
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<m;j++)
+        {
+            cin>>d;
+            if(d=='.')
+            a[i][j]=0;
+            else
+             a[i][j]=-1;
+        }
+    }
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<m;j++)
+        {
+            if(a[i][j]==-1)
+            {
+                for(int b=i-1;b<=i+1;b++)
+                {
+                    if(b<0)
+                    {
+                        continue;
+                    }
+                    for(int c=j-1;c<=j+1;c++)
+                    {
+                        if(c<0)
+                        continue;
+                        if(a[b][c]==-1)
+                        {
+                            continue;
+                        }
+                        else {
+                        {
+                            a[b][c]=a[b][c]+1;
+                        }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<m;j++)
+        {
+            if(a[i][j]==-1)
+            {
+                 cout<<'*';
+            }
+           
+            else
+            {
+                cout<<a[i][j];
+            }
+            
+        }
+        cout<<endl;
+    }
+
+}
