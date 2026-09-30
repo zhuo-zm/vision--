@@ -1,0 +1,17 @@
+#include <iomanip>
+#include <iostream>
+using namespace std;
+void b(int a)
+{
+    if(a<1000)
+    cout<<a;
+    else{
+        b(a/1000);
+        cout<<","<<setw(3)<<setfill('0')<<a%1000;
+    }
+}
+int main() {
+    int a;
+    cin>>a;
+    b(a);
+}
