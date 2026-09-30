@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    string s1,s2;
+    cin>>s1>>s2;
+    if(s1=="elephant")
+    {
+        if(s2=="mouse")
+        cout<<"lose";
+        else if(s2=="tiger")
+         cout<<"win";
+         else
+          cout<<"tie";
+    }
+    else if(s1=="tiger")
+    {
+        if(s2=="elephant")
+        cout<<"lose";
+        else if(s2=="cat")
+         cout<<"win";
+         else
+          cout<<"tie";
+    }
+    else if(s1=="cat")
+    {
+        if(s2=="mouse")
+        cout<<"win";
+        else if(s2=="tiger")
+         cout<<"lose";
+         else
+          cout<<"tie";
+    }
+    else if(s1=="mouse")
+    {
+        if(s2=="elephant")
+        cout<<"win";
+        else if(s2=="cat")
+         cout<<"lose";
+         else
+          cout<<"tie";
+    }
+}
