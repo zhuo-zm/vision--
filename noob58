@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    int n;
+    cin>>n;
+    string a;
+    int i=1;
+    while(a.size()<n)
+    {
+        a+=to_string(i);
+        i++;
+    }
+    cout<<a[n-1];
+}
