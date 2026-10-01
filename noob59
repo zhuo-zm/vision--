@@ -1,0 +1,14 @@
+#include <cctype>
+#include <iostream>
+using namespace std;
+
+int main() {
+    string a;
+    string b="";
+    while(cin>>a)
+    {
+        
+        b=b+(char)toupper(a[0]);
+    }
+    cout<<b;
+}
