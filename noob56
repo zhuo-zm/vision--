@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    string a;
+    cin>>a;
+    int b=0;
+    if(a.size()<=2)
+    cout<<-1;
+    else
+    {for(int i=0;i<a.size()-2;i++)
+    {
+        if(a[i]=='B'||a[i]=='b')
+        {
+            if(a[i+1]=='O'||a[i+1]=='o')
+            {
+                if(a[i+2]=='B'||a[i+2]=='b')
+                {
+                    cout<<i;
+                    b=1;
+                    break;
+                }
+                
+            }
+        }
+    }
+    if(b==0)
+    cout<<-1;}
+
+}
