@@ -1,0 +1,44 @@
+#include <bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+struct point{
+    double x,y;
+    point(double A,double B){
+        x=A,y=B;
+    }
+    point() = default;
+};
+
+struct line{
+    point point_A,point_B;
+    line(point A,point B){
+        point_A = A,point_B = B;
+    }
+    line() = default;
+};
+
+struct Circle{
+    point O;
+    int r;
+    Circle(point A,int B){
+        O=A,r=B;
+    }
+    Circle() = default;
+};
+
+double getDistance(const Circle& circle, const line& l) {
+    // 请在这里实现你的代码
+    double m;
+    double k,b;
+    if(l.point_A.x==l.point_B.x)
+    m=abs(circle.O.x-l.point_A.x);
+    else{
+        k=(l.point_A.y-l.point_B.y)/(l.point_A.x-l.point_B.x);
+    b=l.point_A.y-k*l.point_A.x;
+    m=abs((circle.O.y-k*circle.O.x-b)/sqrt(k*k+1));
+    }
+    double s;
+    s=sqrt(circle.r*circle.r-m*m)*2;
+    return s;
+}
