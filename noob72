@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+#include <cmath>
+using namespace std;
+
+struct point{
+    double x,y;
+    point(double A,double B){
+        x=A,y=B;
+    }
+    point() = default;
+};
+
+struct line{
+    point point_A,point_B;
+    line(point A,point B){
+        point_A = A,point_B = B;
+    }
+    line() = default;
+};
+
+double getDistance(point P, line L){
+    // TODO: 计算点P到直线L的距离
+    double m,n;
+    double k,b;
+    if(L.point_A.x==L.point_B.x)
+    return abs(P.x-L.point_A.x);
+    else{
+        k=(L.point_A.y-L.point_B.y)/(L.point_A.x-L.point_B.x);
+    b=L.point_A.y-k*L.point_A.x;
+    m=abs((P.y-k*P.x-b));
+    n=sqrt(k*k+1);
+    return m/n;
+    }
+    
+}
