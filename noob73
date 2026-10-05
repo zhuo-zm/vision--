@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+struct point{
+    double x,y;
+    point(double A,double B){
+        x=A,y=B;
+    }
+    point() = default;
+};
+
+struct triangle{
+    point a,b,c;
+    triangle(point A,point B,point C){
+        a=A,b=B,c=C;
+    }
+    triangle() = default;
+};
+
+double getArea(triangle T){
+    // TODO: 计算三角形T的面积
+    double m;
+    double k,b;
+    if(T.a.x==T.b.x)
+    m=abs(T.c.x-T.a.x);
+    else{
+        k=(T.a.y-T.b.y)/(T.a.x-T.b.x);
+    b=T.a.y-k*T.a.x;
+    m=abs((T.c.y-k*T.c.x-b)/sqrt(k*k+1));
+    }
+    double x1,y1;
+        x1=T.a.x-T.b.x;
+        y1=T.a.y-T.b.y;
+        double p;
+        p=sqrt(x1*x1+y1*y1*1.0);
+    double s;
+    s=p*m/2;
+    return s;
+}
